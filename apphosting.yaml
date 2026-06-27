@@ -1,0 +1,20 @@
+# apphosting.yaml
+# 파이어베이스 App Hosting 빌드 시 필요한 환경 변수들을 정의합니다.
+
+env:
+  - variable: VITE_FIREBASE_API_KEY
+    value: "AIzaSyCWi_O8Pp3YHKFSlxVHj1_8CBvzRXslKgo"
+  - variable: VITE_FIREBASE_AUTH_DOMAIN
+    value: "dic-c21e5.firebaseapp.com"
+  - variable: VITE_FIREBASE_PROJECT_ID
+    value: "dic-c21e5"
+  - variable: VITE_FIREBASE_STORAGE_BUCKET
+    value: "dic-c21e5.firebasestorage.app"
+  - variable: VITE_FIREBASE_MESSAGING_SENDER_ID
+    value: "822658896503"
+  - variable: VITE_FIREBASE_APP_ID
+    value: "1:822658896503:web:51e6d890bd3394e8d06c72"
+  - variable: VITE_FIREBASE_MEASUREMENT_ID
+    value: "G-V6PXJPRRX8"
+  - variable: VITE_GEMINI_API_KEY
+    value: "AQ.Ab8RN6I-sAvcrqXq9IEwY54cCTUORoOznZA_WAKT_enbk07bCw"
