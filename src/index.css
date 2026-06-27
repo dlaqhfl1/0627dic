@@ -10,7 +10,7 @@
   --glass-bg: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(255, 255, 255, 0.4);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  --font-title: 'Jua', sans-serif; /* 귀여운 폰트 */
+  --font-title: 'Jua', sans-serif;
   --font-body: 'Noto Sans KR', sans-serif;
 }
 
@@ -36,10 +36,45 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
 }
 
+/* 1200px로 컨테이너 크기 확장 (2단 구성을 위해) */
 .app-container {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+
+/* 2단 배치를 위한 래퍼 */
+.layout-wrapper {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* 메인 영역 (왼쪽 검색 및 풀이) */
+.main-content {
+  flex: 1.5;
+  min-width: 0; /* flex 자식 잘림 방지 */
+}
+
+/* 사이드바 영역 (오른쪽 단어장) */
+.sidebar-content {
+  flex: 1;
+  min-width: 350px;
+  position: sticky;
+  top: 2rem;
+}
+
+/* 모바일/태블릿 등 좁은 화면 대응 */
+@media (max-width: 900px) {
+  .layout-wrapper {
+    flex-direction: column;
+  }
+  .sidebar-content {
+    min-width: 100%;
+    position: static;
+  }
 }
 
 /* Glassmorphism Card Style */
